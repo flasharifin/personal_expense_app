@@ -11,6 +11,24 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Personal Expense',
+      theme: ThemeData(
+        primarySwatch: Colors.green,
+        fontFamily: 'QuickSand',
+        textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                fontFamily: 'OpenSans',
+                fontSize: 20,
+                color: Colors.blueAccent,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+        appBarTheme: AppBarTheme(
+          titleTextStyle: TextStyle(
+            fontFamily: 'OpenSans',
+            fontSize: 25,
+          ),
+        ),
+      ),
       home: MyHomePage(),
     );
   }
@@ -23,24 +41,24 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   final List<Transcation> _userTransaction = [
-    Transcation(
-      id: 'trx1',
-      title: 'Top Up Gopay',
-      amount: 20000,
-      date: DateTime.now(),
-    ),
-    Transcation(
-      id: 'trx3',
-      title: 'Top Up ShoppePay',
-      amount: 15000,
-      date: DateTime.now(),
-    ),
-    Transcation(
-      id: 'trx1',
-      title: 'Top Up Ovo',
-      amount: 5000,
-      date: DateTime.now(),
-    ),
+    // Transcation(
+    //   id: 'trx1',
+    //   title: 'Top Up Gopay',
+    //   amount: 20000,
+    //   date: DateTime.now(),
+    // ),
+    // Transcation(
+    //   id: 'trx3',
+    //   title: 'Top Up ShoppePay',
+    //   amount: 15000,
+    //   date: DateTime.now(),
+    // ),
+    // Transcation(
+    //   id: 'trx1',
+    //   title: 'Top Up Ovo',
+    //   amount: 5000,
+    //   date: DateTime.now(),
+    // ),
   ];
 
   void _actionAddNewTrx(String title, double amount) {
